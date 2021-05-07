@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+:root {
+    --background: #1d1e22;
+    --border: gray;
+    --squareGaps: gray;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    /*width: 100%;*/
+    /*display: flex;*/
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--background);
+}
+
+/*** Option selector ***/
+#selector {
+    width:100%;
+    height: 100%;
+    margin: auto;
+    background: white;
+    opacity: .9;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.result {
+    width:100%;
+    height: 100%;
+    margin: auto;
+    opacity: .8;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#correct {
+    display: none;
+    background: green;
+}
+
+#incorrect {
+    display: none;
+    background: red;
+}
+
+#noSolution {
+    display: none;
+    background: red;
+}
+
+.resultText {
+    margin-top: 20%;
+    vertical-align: top;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    opacity: 1;
+}
+
+.button {
+    display: inline-block;
+    width: 100px;
+    padding: 5px;
+    background: gray;
+    /*text-align: center;*/
+    margin-top: 20%;
+    vertical-align: top;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/*** Banner ***/
+header {
+    color: white
+}
+
+/*** Everything on the board***/
+#board {
+    display: grid;
+    grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.block {
+    display: grid;
+    grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+    width: 201px;
+    height: 201px;
+    grid-gap: 0px;
+    border: 2px solid var(--border);
+    background: var(--squareGaps);
+}
+
+#board .block.left {
+    border-left: 4px solid var(--border);
+}
+
+#board .block.right {
+    border-right: 4px solid var(--border);
+}
+
+#board .block.top {
+    border-top: 4px solid var(--border);
+}
+
+#board .block.bottom {
+    border-bottom: 4px solid var(--border);
+}
+
+.square {
+    display: inline-block;
+    cursor: pointer;
+    width: 65px;
+    height: 65px;
+    background: white;
+    margin: auto;
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.highlighted {
+    background: rgb(213, 236, 248);
+}
+
+.selected {
+    background: rgb(180, 216, 233);
+}
+
+/*** Selections ***/
+.selector {
+    display: block;
+}
+
+.numbers {
+    display: block;
+    background-color: white;
+}
+
+.number {
+    cursor: pointer;
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    margin: 5px;
+    background: white;
+    border-radius: 5px;
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.active {
+    background: gray;
+}
+
+/* Bottom Button */
+#submit {
+    cursor: pointer;
+    padding: 10px 30px;
+    margin: 20px;
+    display: inline-block;
+    color: black;
+    font-size: 24px;
+    background: #3d3d3f;
+
+}
+
+/*** Frequently Used***/
+/*.one {
+    background-color: white;
+    background: url(../images/one-icon.png) center / 100%;
+    
+}*/

@@ -1,0 +1,72 @@
+:root {
+    --bg: #1d1e22;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*html {
+    font-family
+}*/
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--bg);
+}
+.container {
+    width: 100vw;
+    height: 400px;
+    background-color: gray;
+    max-width: 600px;
+    display: grid;
+    grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+    grid-gap: 5px;
+    margin-bottom: 20px;
+}
+/* Makes it so that no more moves can happen when the game is over*/
+body.over .container {
+    cursor: no-drop;
+}
+body.over .container .item {
+    pointer-events: none;
+}
+.item {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+}
+.playerTitle {
+    font-size: 50px;
+    margin-bottom: 100px;
+    color: white;
+}
+.playerX {
+    background: url(./images/imageOfX.png) no-repeat center / 50%;
+    background-color: var(--bg);
+}
+.computer {
+    background: url(./images/imageOfO.png) no-repeat center / 50%;
+    background-color: var(--bg);
+}
+.rematch {
+    cursor: pointer;
+    padding: 20px 50px;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin-bottom: 30px;
+    opacity: 0; /* If display is none this doesn't do anything*/
+    display: none;
+}
+body.over .rematch {
+    opacity: 1;
+    display: inline-block;
+}
